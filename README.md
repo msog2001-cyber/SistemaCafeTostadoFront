@@ -1,16 +1,42 @@
-# React + Vite
+# Sistema de Inventario de Café - Un Cafecito Pa' Ti
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descripción
+Aplicación web desarrollada con React para gestionar el inventario de productos de café tostado.
 
-Currently, two official plugins are available:
+## Objetivo
+Facilitar el registro, control y visualización de los productos disponibles en el emprendimiento Un Cafecito Pa' Ti.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
+- Registro de productos.
+- Control de precios.
+- Control de existencias.
+- Visualización de productos en una tabla.
+- Resumen del inventario.
 
-## React Compiler
+## Tecnologías utilizadas
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
+- Git
+- GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalación y ejecución
+1. Instalar Node.js.
+2. Abrir una consola en la carpeta del proyecto.
+3. Ejecutar `npm install`.
+4. Ejecutar `npm run dev`.
+5. Abrir en el navegador la dirección indicada por Vite.
 
-## Expanding the Oxlint configuration
+## Control de versiones
+El proyecto utiliza Git para el control de versiones y GitHub para almacenar el código fuente.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Repositorio
+https://github.com/msog2001-cyber/SistemaCafeTostadoFront
+
+## Autor
+Proyecto desarrollado para la evidencia GA7-220501096-AA4-EV03 del programa ADSO del SENA.
+
+## Emprendimiento
+Un Cafecito Pa' Ti - Café tostado del Huila, Colombia.
