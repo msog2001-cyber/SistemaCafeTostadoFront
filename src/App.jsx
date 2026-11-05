@@ -2,26 +2,33 @@
 import { useState } from 'react'
 import './App.css'
 
+// Componente principal de la aplicación de inventario de café
 function App() {
+
+  // Lista inicial de productos con presentación, precio y stock
   const [productos, setProductos] = useState([
     { id: 1, nombre: 'Café tostado Huila', presentacion: '250 g', precio: 18000, stock: 15 },
     { id: 2, nombre: 'Café tostado Huila', presentacion: '500 g', precio: 34000, stock: 10 },
     { id: 3, nombre: 'Café tostado Huila', presentacion: '1 libra', precio: 32000, stock: 5 },
   ])
 
+  // Estados para almacenar los datos del formulario
   const [nombre, setNombre] = useState('')
   const [presentacion, setPresentacion] = useState('250 g')
   const [precio, setPrecio] = useState('')
   const [stock, setStock] = useState('')
 
+  // Función para registrar un nuevo producto en el inventario
   const agregarProducto = (e) => {
     e.preventDefault()
 
+    // Validación de campos obligatorios
     if (!nombre || !precio || !stock) {
       alert('Por favor, completa todos los campos.')
       return
     }
 
+    // Creación del objeto del nuevo producto
     const nuevoProducto = {
       id: Date.now(),
       nombre,
@@ -30,14 +37,17 @@ function App() {
       stock: Number(stock),
     }
 
+    // Actualización de la lista de productos
     setProductos([...productos, nuevoProducto])
 
+    // Limpieza del formulario después del registro
     setNombre('')
     setPresentacion('250 g')
     setPrecio('')
     setStock('')
   }
 
+  // Función para mostrar los precios en pesos colombianos
   const formatoCOP = (valor) =>
     valor.toLocaleString('es-CO', {
       style: 'currency',
@@ -45,8 +55,11 @@ function App() {
       maximumFractionDigits: 0,
     })
 
+  // Renderizado de la interfaz visual del sistema
   return (
     <div className="app">
+
+      {/* Encabezado principal del sistema */}
       <header className="encabezado">
         <div>
           <h1>☕ Un Cafecito Pa' Ti</h1>
@@ -56,6 +69,8 @@ function App() {
       </header>
 
       <main className="contenido">
+
+        {/* Tarjetas de resumen del inventario */}
         <section className="resumen">
           <div className="tarjeta">
             <h3>Total de productos</h3>
@@ -77,6 +92,7 @@ function App() {
           </div>
         </section>
 
+        {/* Formulario para registrar productos */}
         <section className="panel">
           <h2>Registrar producto</h2>
 
@@ -133,6 +149,7 @@ function App() {
           </form>
         </section>
 
+        {/* Tabla que muestra los productos registrados */}
         <section className="panel">
           <h2>Inventario de productos</h2>
 
@@ -162,6 +179,7 @@ function App() {
         </section>
       </main>
 
+      {/* Pie de página de la aplicación */}
       <footer>
         Un Cafecito Pa' Ti | Sistema de inventario
       </footer>
@@ -169,4 +187,5 @@ function App() {
   )
 }
 
+// Exportación del componente para utilizarlo en la aplicación
 export default App
